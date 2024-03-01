@@ -33,10 +33,17 @@ In this test you are given the following
 ## How to get started
 
 ### Setup python environment
+#### Mac / Linux
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install -r pipeline/requirements.txt
+pip install -r requirements.txt
+```
+#### Windows
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r pipeline\requirements.txt
 ```
 
 ### Start postgres
@@ -46,8 +53,19 @@ docker-compose up -d
 ```
 
 ### Load the provided schema into postgres
+#### Mac / Linux
 ```bash
 PGHOST=localhost PGPORT=5432 PGDATABASE=sales PGUSER=postgres PGPASSWORD=mysecretpassword psql -f schema.sql
+```
+
+#### Windows
+```bash
+set PGHOST=localhost
+set PGPORT=5432
+set PGDATABASE=sales
+set PGUSER=postgres
+set PGPASSWORD=mysecretpassword
+psql -f schema.sql
 ```
 
 ### Running the tests *(optional but may help in writing the python)*
