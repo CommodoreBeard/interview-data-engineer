@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ```bash
 python -m venv venv
 .\venv\Scripts\activate
-pip install -r pipeline\requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Start postgres
@@ -53,6 +53,7 @@ docker-compose up -d
 ```
 
 ### Load the provided schema into postgres
+These commands use psql cli but you can connect to the database using the environment variables provided and use any SQL client you prefer.
 #### Mac / Linux
 ```bash
 PGHOST=localhost PGPORT=5432 PGDATABASE=sales PGUSER=postgres PGPASSWORD=mysecretpassword psql -f schema.sql
