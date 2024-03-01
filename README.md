@@ -51,6 +51,11 @@ This creates a `sales` database
 ```bash
 docker-compose up -d
 ```
+*Note: if you have something running locally on port 5432 which will conflict with the postgres docker container then you can change the local port mapping in `docker-compose.yml` like so:*
+```yaml
+    ports:
+      - "6543:5432"
+``` 
 
 ### Load the provided schema into postgres
 These commands use psql cli but you can connect to the database using the environment variables provided and use any SQL client you prefer.
