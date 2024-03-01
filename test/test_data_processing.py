@@ -49,7 +49,7 @@ def capture_logging():
 
 def test_read_csv_data():
     # GIVEN
-    file_path = '../generated_sales_data.csv'
+    file_path = './generated_sales_data.csv'
     expected_columns = [
         'SaleID', 'ProductID', 'ProductName', 'Brand', 'Category',
         'RetailerID', 'RetailerName', 'Channel', 'Location',
@@ -140,6 +140,7 @@ def test_clean_data_with_currency_code():
 
     # THEN
     assert cleaned_data_sorted == expected_data, "Cleaned data with currency code does not match expected."
+
 
 def test_validate_data():
     # GIVEN

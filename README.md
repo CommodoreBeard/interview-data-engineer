@@ -29,6 +29,7 @@ In this test you are given the following
     3) **Top Selling Product by Category for Each Retailer**
     Write a SQL query to identify the top selling product by total sales amount in each category for each retailer.
 
+- **Finally:** During the interview feedback session where you will present your solution we (gfk) will ask questions regarding deploying this type of pipeline with cloud based tooling such as Azure Microsoft Fabric or Google Cloud Platform Composer or Workflow. Please be prepared to discuss this.
 ---
 ## How to get started
 
