@@ -2,6 +2,11 @@
 
 👋 Welcome to the GfK Data Engineer Technical Test
 
+## Test Option
+You will have been informed to complete one of the following options:
+- **Python and SQL** remain on the `main` branch and complete the tasks as described below
+- **SQL Only** switch to the `sql-focus` (`git checkout sql-focus`) branch and complete the tasks in the `README.md` file there
+
 ## Objective
 Write python code that will read data from `./generated-sales-data.csv`, process it and store it the postgres database using the provided schema. Then write SQL queries to answer the questions below in the *Tasks to be completed* section.
 
