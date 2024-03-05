@@ -1,11 +1,9 @@
 version: '3.8'
 services:
   postgres:
-    image: postgres:latest
+    image: commodorebeard/interview-data-engineer:latest
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=mysecretpassword
-    volumes:
-      - ./initdb:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
