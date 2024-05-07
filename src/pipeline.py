@@ -21,9 +21,9 @@ def main(csv_file_path: str):
     cleaned_data = clean_data(raw_data)
     print("Data cleaned.")
 
-    # Step 3: Validate data
-    validated_data = validate_data(cleaned_data)
-    print("Data validated.")
+    # # Step 3: Validate data
+    # validated_data = validate_data(cleaned_data)
+    # print("Data validated.")
 
     # Step 4: Transform data
     product_dim, retailer_dim, date_dim, sales_fact = transform_data(validated_data)

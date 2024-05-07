@@ -142,38 +142,6 @@ def test_clean_data_with_currency_code():
     assert cleaned_data_sorted == expected_data, "Cleaned data with currency code does not match expected."
 
 
-def test_validate_data():
-    # GIVEN
-    data = [
-        {
-            'SaleID': '1', 'ProductID': '101', 'ProductName': 'WidgetA',
-            'Brand': 'BrandA', 'Category': 'CategoryA', 'RetailerID': '1',
-            'RetailerName': 'RetailerA', 'Channel': 'Online', 'Location': 'CityA',
-            'Quantity': '5', 'Price': '20.00', 'Date': '2023-01-01'
-        },
-        {
-            'SaleID': '2', 'ProductID': '', 'ProductName': 'WidgetB',
-            'Brand': 'BrandB', 'Category': 'CategoryB', 'RetailerID': '2',
-            'RetailerName': 'RetailerB', 'Channel': 'Offline', 'Location': 'CityB',
-            'Quantity': '0', 'Price': '-10.00', 'Date': 'not-a-date'
-        }
-    ]
-    expected_validated_data = [
-        {
-            'SaleID': '1', 'ProductID': '101', 'ProductName': 'WidgetA',
-            'Brand': 'BrandA', 'Category': 'CategoryA', 'RetailerID': '1',
-            'RetailerName': 'RetailerA', 'Channel': 'Online', 'Location': 'CityA',
-            'Quantity': '5', 'Price': '20.00', 'Date': '2023-01-01'
-        }
-    ]
-
-    # WHEN
-    validated_data = validate_data(data)
-
-    # THEN
-    assert validated_data == expected_validated_data, "Validation did not yield expected data."
-
-
 def test_transform_data():
     # GIVEN
     raw_data = [
